@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow: hidden;
+  background-color: #d1ccb8;
+  font-family: "Montserrat", sans-serif;
+}
+.webgl {
+  flex: 1;
+  max-height: 50vh;
+  max-width: 50vw;
+}
+
+.header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 1em;
+}
+
+.logo {
+  width: 180px;
+  height: auto;
+  margin-right: 1em;
+  margin-left: 2rem;
+}
+
+.event-info small {
+  display: block;
+  color: #595551;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+a {
+  text-decoration: underline;
+  color: #595551;
+  font-size: 1rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #595551;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-buy {
+  background-color: #02ffff;
+  border: none;
+}
+
+.btn-buy:hover {
+  background-color: #01dede;
+}
+
+.hero-title {
+  color: #5a5552;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  color: #5a5553;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 200;
+}
+
+.hero-text {
+  width: 50%;
+  padding-right: 20px;
+}
+
+h1 {
+  display: block;
+  font-weight: bold;
+}
+
+p {
+  color: #2b2b2a;
+  margin-bottom: 2rem;
+  max-width: 60%;
+}
+
+.hero-button-info {
+  border: none;
+  color: #595551;
+  background-color: #d1ccb8;
+  font-size: 1.5rem;
+}
+
+.hero-text {
+  flex: 1;
+
+  margin-left: 6rem;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 80vh;
+  margin-left: 20px;
+  margin-right: 80px;
+  gap: 8rem;
+}
+
+.debug {
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+  font-weight: 400;
+  color: #595551;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .logo {
+    margin-bottom: 10px; /* Add space between logo and navigation on small screens */
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-links li {
+    width: 100%; /* Full width for better touch targets */
+    text-align: center;
+  }
+
+  .hero-text {
+    width: 100%;
+    margin-left: 0;
+  }
+}
