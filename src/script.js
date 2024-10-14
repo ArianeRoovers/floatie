@@ -186,11 +186,17 @@ const tick = () => {
     const waterGeometry = waterMesh.geometry;
     const positions = waterGeometry.attributes.position.array;
 
+    const frequency = 12;
+    const speed = 1.5;
+    const amplitude = 0.05;
+
     for (let i = 0; i < positions.length; i += 3) {
       const x = positions[i];
       const z = positions[i + 2];
+
       positions[i + 1] =
-        Math.sin(Math.sqrt(x * x + z * z) * 3 + elapsedTime * 0.5) * 0.05;
+        Math.sin(Math.sqrt(x * x + z * z) * frequency + elapsedTime * speed) *
+        amplitude;
     }
 
     waterGeometry.attributes.position.needsUpdate = true;
